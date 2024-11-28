@@ -103,4 +103,4 @@ with open("file.txt", "r+") as f:
 
 # https://metanit.com/python/fastapi/
 
-
+#https://www.w3schools.com/html/html_tables.asp
