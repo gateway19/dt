@@ -104,3 +104,44 @@ with open("file.txt", "r+") as f:
 # https://metanit.com/python/fastapi/
 
 #https://www.w3schools.com/html/html_tables.asp
+
+
+#AUTH
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Авторизация</title>
+</head>
+<body>
+    <input type="text" name="login" id="login" placeholder="Логин" required>
+    <input type="password" name="password" id="password" placeholder="Пароль" required>
+    <button onclick="Auth()">Войти</button>
+</body> 
+<script>
+    const trueLogin = "123";
+    const truePassword = "123";
+
+    function Auth()
+    {
+        let login = document.getElementById("login").value;
+        let password = document.getElementById("password").value;
+
+        if(login != trueLogin || password != truePassword)
+        {
+            alert("Неправильный логин или пароль");
+            return;
+        }
+
+        sessionStorage.setItem("token", "key");
+        window.location.href = "/orders.html";
+    }
+</script>
+</html>
+
+#// <script>
+    if(!sessionStorage.getItem("token"))
+        window.location.href = "auth.html";
+</script>
+
+
+
