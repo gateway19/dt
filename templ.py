@@ -78,3 +78,11 @@ var date = new Date( {{ inside_data[2] }}  * 1000);
 alert(date)
 </script>
 </html>
+
+
+
+
+
+pip install Jinja2
+pip install fastapi
+pip install uvicorn
