@@ -86,3 +86,8 @@ alert(date)
 pip install Jinja2
 pip install fastapi
 pip install uvicorn
+
+with open("file.txt", "r+") as f:
+    text = f.read()
+    print(text)
+    f.write("stuff to append")
