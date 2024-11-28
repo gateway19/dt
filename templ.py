@@ -3,7 +3,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.responses import HTMLResponse, RedirectResponse
 from datetime import datetime
 import uuid
-
+print(uuid.uuid4())
 
 
 app = FastAPI()
@@ -52,6 +52,12 @@ async def getdata(data = Body()):
 
 
 
+@app.post("/postdata")
+def postdata(username: str = Form(default ="Undefined", min_length=2, max_length=20), 
+            age: int =Form(default=18, ge=18, lt=111)):
+    return {"name": username, "age": age}
+# https://metanit.com/python/fastapi/1.15.php
+
 
 
 import uvicorn
@@ -91,3 +97,10 @@ with open("file.txt", "r+") as f:
     text = f.read()
     print(text)
     f.write("stuff to append")
+
+
+
+
+
+
+
